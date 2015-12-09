@@ -1,0 +1,35 @@
+Source: steam
+Section: games
+Priority: optional
+Maintainer: Valve Corporation <linux@steampowered.com>
+Build-Depends: debhelper (>= 8.0.0),
+               python-all (>= 2.6.6-3~)
+Standards-Version: 3.9.4
+Homepage: http://www.steampowered.com/
+
+Package: steam-launcher
+Architecture: all
+Multi-Arch: foreign
+Replaces: steam, steam64
+Breaks: steam64
+Depends: ${misc:Depends},
+         ${python:Depends},
+         curl,
+         libc6 (>= 2.15),
+         python-apt,
+         xterm | gnome-terminal | konsole,
+         xz-utils,
+         zenity
+Recommends: jockey-common
+Description: Launcher for the Steam software distribution service
+ Steam is a software distribution service with an online store, automated
+ installation, automatic updates, achievements, SteamCloud synchronized
+ savegame and screenshot functionality, and many social features.
+
+Package: steam
+Section: oldlibs
+Priority: extra
+Architecture: i386
+Depends: steam-launcher (>= ${source:Version})
+Description: Launcher for the Steam software distribution service
+ This is a transitional package that can be safely removed once steam-launcher is installed.

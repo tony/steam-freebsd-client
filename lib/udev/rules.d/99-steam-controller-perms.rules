@@ -1,0 +1,7 @@
+# Valve USB devices
+SUBSYSTEM=="usb", ATTRS{idVendor}=="28de", MODE="0666"
+# Steam Controller udev write access
+KERNEL=="uinput", SUBSYSTEM=="misc", TAG+="uaccess"
+# HTC Vive HID Sensor naming and permissioning
+KERNEL=="hidraw*", SUBSYSTEM=="hidraw", ATTRS{idVendor}=="0bb4", ATTRS{idProduct}=="2c87", MODE="0666"
+

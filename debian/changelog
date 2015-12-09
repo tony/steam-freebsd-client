@@ -1,0 +1,358 @@
+steam (1.0.0.51) precise; urgency=medium
+
+  * Add uinput rule for the Steam Controller.
+  * Remove udev rule for the Oculus Rift VR headset.
+  * Add udev rule for HTC Vive VR headset.
+
+ -- John Vert <johnv@valvesoftware.com>  Tue, 17 Nov 2015 11:21:15 -0800
+
+steam (1.0.0.50) precise; urgency=medium
+
+  * Added libXinerama and libXext to the bootstrap runtime to fix AMD 
+    graphics driver crashing if these aren't present.
+
+ -- John Vert <johnv@valvesoftware.com>  Tue, 05 May 2015 10:44:29 -0700
+
+steam (1.0.0.49) precise; urgency=medium
+
+  * Update packaged icons.
+  * Update liblibstdc++ file version to match new runtime.
+
+ -- Pierre-Loup A. Griffais <pgriffais@valvesoftware.com>  Mon, 25 Aug 2014 17:57:42 -0700
+
+steam (1.0.0.48) precise; urgency=medium
+
+  * Update udev rules to encompass all Valve USB devices
+
+ -- John Vert <johnv@valvesoftware.com>  Mon, 16 Jun 2014 11:42:10 -0700
+
+steam (1.0.0.47) precise; urgency=low
+
+  * Fix python indentation error
+
+ -- Valve Corporation <linux@steampowered.com>  Mon, 10 Feb 2014 16:23:07 -0800
+
+steam (1.0.0.46) precise; urgency=low
+
+  * Change steamdeps to handle installing the right packages with Ubuntu Saucy 
+    GL stack
+  * Change apt repository to indicate only amd64 and i386 support
+
+ -- Valve Corporation <linux@steampowered.com>  Mon, 10 Feb 2014 15:49:53 -0800
+
+steam (1.0.0.45) precise; urgency=low
+
+  * Add missing runtime dependencies for bootstrapping
+
+ -- Valve Corporation <linux@steampowered.com>  Mon, 25 Nov 2013 10:52:42 -0700
+
+steam (1.0.0.44) precise; urgency=low
+
+  * Remove jockey-common from steamdeps
+
+ -- Valve Corporation <linux@steampowered.com>  Wed, 13 Nov 2013 11:14:43 -0800
+
+steam (1.0.0.43) precise; urgency=low
+
+  * Update udev rules to support front panel and Oculus Rift
+  * Demote jockey-common dependency to Recommends
+
+ -- Valve Corporation <linux@steampowered.com>  Tue, 08 Oct 2013 10:52:42 -0700
+
+steam (1.0.0.42) precise; urgency=low
+
+  * Update udev rules
+
+ -- Valve Corporation <linux@steampowered.com>  Mon, 09 Sep 2013 14:57:10 -0700
+
+steam (1.0.0.41) precise; urgency=low
+
+  * Fix steamdeps to handle installing the right packages on both quantal and 
+    raring GL stacks.
+
+ -- Valve Corporation <linux@steampowered.com>  Tue, 03 Sep 2013 12:57:06 -0700
+
+steam (1.0.0.40) precise; urgency=low
+
+  * Updated steamdeps to deal with raring GL stack in 12.04.3
+
+ -- Valve Corporation <linux@steampowered.com>  Wed, 28 Aug 2013 13:29:31 -0700
+
+steam (1.0.0.39) precise; urgency=low
+
+  * Updated bootstrap files with proxy envvar parsing fixes
+
+ -- Valve Corporation <linux@steampowered.com>  Thu, 9 May 2013 17:00:24 -0800
+
+steam (1.0.0.38) precise; urgency=low
+
+  * Updated bootstrap files with network download fixes
+
+ -- Valve Corporation <linux@steampowered.com>  Wed, 24 Apr 2013 12:00:24 -0800
+
+steam (1.0.0.37) precise; urgency=low
+
+  * Updated steam:i386 dependency so it requires steam-launcher >= current version
+
+ -- Valve Corporation <linux@steampowered.com>  Tue, 12 Mar 2013 11:38:24 -0800
+
+steam (1.0.0.36) precise; urgency=low
+
+  * Renamed /usr/share/pixmaps/steam_tray.png /usr/share/pixmaps/steam_tray_mono.png
+
+ -- Valve Corporation <linux@steampowered.com>  Tue, 12 Mar 2013 11:21:08 -0800
+
+steam (1.0.0.35) precise; urgency=low
+
+  * Turned steam:i386 into a transitional package bringing in steam-launcher
+
+ -- Valve Corporation <linux@steampowered.com>  Sun, 24 Feb 2013 17:45:01 -0800
+
+steam (1.0.0.34) precise; urgency=low
+
+  * Added support for the konsole terminal emulator during dependency installation
+  * Added i386 as a foreign architecture if necessary on 64-bit systems
+
+ -- Valve Corporation <linux@steampowered.com>  Sun, 24 Feb 2013 17:45:01 -0800
+
+steam (1.0.0.33) precise; urgency=low
+
+  * Fixed 32-bit package installation after a fresh install on 64-bit system
+
+ -- Valve Corporation <linux@steampowered.com>  Sat, 23 Feb 2013 21:10:11 -0800
+
+steam (1.0.0.32) precise; urgency=low
+
+  * steam-launcher package also replaces the steam64 package
+  * Re-added the steam:i386 package to ease transition to steam-launcher
+
+ -- Valve Corporation <linux@steampowered.com>  Sat, 23 Feb 2013 15:59:46 -0800
+
+steam (1.0.0.31) precise; urgency=low
+
+  * Added dependencies on curl and xz-utils
+  * Run apt-get update before trying to install additional dependencies
+
+ -- Valve Corporation <linux@steampowered.com>  Sat, 23 Feb 2013 12:28:21 -0800
+
+steam (1.0.0.30) precise; urgency=low
+
+  * Made a single package that works on both 32 and 64-bit platforms
+
+ -- Valve Corporation <linux@steampowered.com>  Mon, 18 Feb 2013 15:11:32 -0800
+
+steam (1.0.0.29) precise; urgency=low
+
+  * Temporarily removed dependency on 32-bit glx because this causes uninstallation of 64-bit X server if installed on Ubuntu 12.04.2.
+
+ -- Valve Corporation <linux@steampowered.com>  Mon, 18 Feb 2013 15:11:32 -0800
+
+steam (1.0.0.28) precise; urgency=low
+
+  * Added explicit dependency on libc version 2.15 or newer
+  * Removed spurious extra paragraph in package description
+
+ -- Valve Corporation <linux@steampowered.com>  Fri, 15 Feb 2013 11:30:21 -0800
+
+steam (1.0.0.27) precise; urgency=low
+
+  * Removed references to beta from the documentation
+
+ -- Valve Corporation <linux@steampowered.com>  Thu, 14 Feb 2013 11:02:05 -0800
+
+steam (1.0.0.26) precise; urgency=low
+
+  * We're no longer beta!
+  * Moved apt key from postinstall to /etc/apt/trusted.gpg.d
+  * Added debian copyright file, referring to steam_install_agreement.txt
+  * Fixed line endings in steam.desktop
+  * Removed redundant gtk icon update postinstall step
+
+ -- Valve Corporation <linux@steampowered.com>  Wed, 13 Feb 2013 09:19:53 -0800
+
+steam (1.0.0.25) precise; urgency=low
+
+  * Added license to bootstrap so fresh installs work correctly
+
+ -- Valve Corporation <linux@steampowered.com>  Thu, 7 Feb 2013 18:19:00 -0800
+
+steam (1.0.0.24) precise; urgency=low
+
+  * Added license to allow repackaging for other Linux distributions
+
+ -- Valve Corporation <linux@steampowered.com>  Thu, 7 Feb 2013 11:03:58 -0800
+
+steam (1.0.0.23) precise; urgency=low
+
+  * Created an unpackaged archive for installing on non-Debian systems
+  * Added a 64-bit package that depends on the current 32-bit package
+  * Added Steam Linux Runtime, massively reducing the package dependencies
+
+ -- Valve Corporation <linux@steampowered.com>  Tue, 5 Feb 2013 9:24:21 -0800
+
+steam (1.0.0.22) unstable; urgency=low
+
+  * Removed dependency on libjpeg-turbo8
+  * Fixed /usr/bin/steam to handle localized Desktop directory correctly again
+
+ -- Valve Corporation <linux@steampowered.com>  Tue, 15 Jan 2013 10:31:21 -0800
+
+steam (1.0.0.21) unstable; urgency=low
+
+  * Copy the bootstrap files to the user Steam directory in case the bootstrap needs to be reinstalled by Steam itself
+  * Update the version of /usr/bin/steam with each package release
+  * Added dependency on xterm or gnome-terminal
+
+ -- Valve Corporation <linux@steampowered.com>  Wed, 09 Jan 2013 16:39:49 -0800
+
+steam (1.0.0.20) unstable; urgency=low
+
+  * Fixed layout of installation wizard when installing multiple apps.
+  * Fixed rare occurrence of prompting a user to accept the same Steam Subscriber Agreements multiple times.
+  * Big Picture: Added support for notifying the user when logging into an account that has already logged in on another machine
+  * Big Picture: Fixed bug where chat notifications might not be displayed when in game.
+  * Big Picture: Fixed possibly displaying multiple countdown timers in the store
+  * Big Picture: Fixed loading animations disappearing before loading was complete
+  * Big Picture: Fixed crash when entering Big Picture mode while in a voice chat
+  * Linux: add support for custom Steam library folders
+  * Linux: fix bug w/notifications stealing focus
+  * Linux: fix bug that caused text to be entered backwards in edit fields
+  * Linux: fix overlay crash w/Amnesia: The Dark Descent Demo
+  * Linux: fix overlay crash w/The Critter Chronicles
+  * Linux: fix "Retrieve A Lost Account" wizard causing steam to minimize
+  * Linux: fix Turkish characters showing up correctly in Steam updater window
+  * Linux: remove game icons when removing a game
+  * Linux: fix bug causing menus to close when a sub-menu closes
+  * Linux: fix bug with usernames ending with '.'
+  * Linux: fix bug w/Steam changing global mouse cursor theme
+
+ -- Valve Corporation <linux@steampowered.com>  Tue, 08 Jan 2013 16:39:49 -0800
+
+steam (1.0.0.19) unstable; urgency=low
+
+  * added /usr/bin/steamdeps script to install additional dependencies
+
+ -- Valve Corporation <linux@steampowered.com>  Tue, 18 Dec 2012 9:38:01 -0700
+
+steam (1.0.0.18) unstable; urgency=low
+
+  * added support for hotplug joysticks using SDL 2.0 and libudev
+  * added multi-monitor support using Xinerama
+  * added signed .changes files instead of signing the .deb packages directly (fixes issue when installing on systems with lintian)
+
+ -- Valve Corporation <linux@steampowered.com>  Fri, 14 Dec 2012 14:10:57 -0700
+
+steam (1.0.0.17) unstable; urgency=low
+
+  * notify the user of important package updates instead of trying to update /usr/bin/steam
+  * added a software source for automatic package updates at http://repo.steampowered.com/steam/
+  * added a 256x256 steam icon
+
+ -- Valve Corporation <linux@steampowered.com>  Fri, 7 Dec 2012 09:10:57 -0700
+
+steam (1.0.0.16) unstable; urgency=low
+
+  * use XDG_DATA_HOME for default Steam install path.
+  * added libgl1-mesa-glx and libgl1-mesa-dri as dependencies
+  * added check for broken gksudo installs, use fallback if necessary
+
+ -- Valve Corporation <linux@steampowered.com>  Thu, 28 Nov 2012 15:16:16 -0700
+
+steam (1.0.0.15) unstable; urgency=low
+
+  * find the Steam content directory if the user has moved it
+  * run core steam executable on systems without OpenGL installed
+
+ -- Valve Corporation <linux@steampowered.com>  Thu, 15 Nov 2012 15:16:16 -0700
+
+steam (1.0.0.14) unstable; urgency=low
+
+  * switch to xz compression for bootstrap tar file
+  * add dependencies on joystick and jstest-gtk packages for joystick support
+
+ -- Valve Corporation <linux@steampowered.com>  Wed, 17 Oct 2012 15:16:16 -0700
+
+steam (1.0.0.13) unstable; urgency=low
+
+  * automatically detect package dependencies.
+
+ -- Valve Corporation <linux@steampowered.com>  Fri, 05 Oct 2012 16:35:27 -0700
+
+steam (1.0.0.12) unstable; urgency=low
+
+  * updated package dependencies.
+
+ -- Valve Corporation <linux@steampowered.com>  Tue, 18 Sep 2012 19:15:43 -0700
+
+steam (1.0.0.11) unstable; urgency=low
+
+  * changed bin folder from linux32 to ubuntu12_32 as we have updated our build system and linux32 is now only used by steamcmd.
+
+ -- Valve Corporation <linux@steampowered.com>  Mon, 27 Aug 2012 15:25:51 -0700
+
+steam (1.0.0.10) unstable; urgency=low
+
+  * Updated dependencies, now includes openal.
+
+ -- Valve Corporation <linux@steampowered.com>  Fri, 13 Jul 2012 18:13:02 -0700
+
+steam (1.0.0.9) unstable; urgency=low
+
+  * Launcher script now opens an xterm to show progress on initial
+    bootstrapping, to be replaced by a real progress bar in future.
+
+ -- Valve Corporation <linux@steampowered.com>  Tue, 26 Jun 2012 10:27:26 -0700
+
+steam (1.0.0.8) unstable; urgency=low
+
+  * Better icon.
+
+ -- Valve Corporation <linux@steampowered.com>  Mon, 25 Jun 2012 13:26:49 -0700
+
+steam (1.0.0.7) unstable; urgency=low
+
+  * Removed dependency on libode1.
+
+ -- Valve Corporation <linux@steampowered.com>  Thu, 21 Jun 2012 16:18:14 -0700
+
+steam (1.0.0.6) unstable; urgency=low
+
+  * Fixed a syntax error in the steam script.
+
+ -- Valve Corporation <linux@steampowered.com>  Wed, 20 Jun 2012 16:35:55 -0700
+
+steam (1.0.0.5) unstable; urgency=low
+
+  * Cleaned up package build files.
+
+ -- Valve Corporation <linux@steampowered.com>  Wed, 20 Jun 2012 16:02:48 -0700
+
+steam (1.0.0.4) unstable; urgency=low
+
+  * Modified script to download and extract a bootstrap.tar.gz archive.
+
+ -- Valve Corporation <linux@steampowered.com>  Wed, 20 Jun 2012 14:45:50 -0700
+
+steam (1.0.0.3) unstable; urgency=low
+
+  * Improved dependencies by using dpkg-shlibdeps to gather info.
+
+ -- Valve Corporation <linux@steampowered.com>  Wed, 20 Jun 2012 14:05:37 -0700
+
+steam (1.0.0.2) unstable; urgency=low
+
+  * Added dependencies representative of the client and one of the test games.
+
+ -- Valve Corporation <linux@steampowered.com>  Wed, 20 Jun 2012 13:23:19 -0700
+
+steam (1.0.0.1) unstable; urgency=low
+
+  * Internal Release.
+
+ -- Valve Corporation <linux@steampowered.com>  Tue, 19 Jun 2012 17:47:05 -0700
+
+steam (1.0.0.0) unstable; urgency=low
+
+  * Internal Release.
+
+ -- Valve Corporation <linux@steampowered.com>  Tue, 19 Jun 2012 13:06:14 -0700
